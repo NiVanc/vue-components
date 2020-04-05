@@ -1,4 +1,4 @@
-Vue.component("iz-server-status", {
+let component = {
   data() {
     return {
       status: "Critical",
@@ -11,8 +11,11 @@ Vue.component("iz-server-status", {
       this.status = "Normal";
     },
   },
-});
+};
 
 new Vue({
   el: "#app",
+  components: {
+    "iz-server-status": component,
+  },
 });
